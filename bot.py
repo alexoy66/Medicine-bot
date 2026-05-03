@@ -8,7 +8,9 @@ from telegram.ext import (
     MessageHandler, filters, ContextTypes, ConversationHandler
 )
 
-TOKEN = "IL_TUO_NUOVO_TOKEN"
+import os
+TOKEN = os.environ.get("TOKEN")
+
 DATA_FILE = "medicine.json"
 NOME, ORA, FREQUENZA, CONFERMA = range(4)
 
